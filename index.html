@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPX Trail Editor</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Leaflet Draw CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h1>🗺️ GPX Trail Editor</h1>
+            
+            <div class="section">
+                <h3>Load GPX File</h3>
+                <input type="file" id="gpxFileInput" accept=".gpx" />
+                <button id="loadGpxBtn" class="btn btn-primary">Load GPX</button>
+            </div>
+
+            <div class="section">
+                <h3>Draw New Trail</h3>
+                <p class="info">Use the drawing tools on the map to create a new trail.</p>
+                <button id="clearMapBtn" class="btn btn-warning">Clear Map</button>
+            </div>
+
+            <div class="section">
+                <h3>Export Trail</h3>
+                <input type="text" id="trailName" placeholder="Trail name" value="My Trail" />
+                <button id="exportGpxBtn" class="btn btn-success">Export as GPX</button>
+            </div>
+
+            <div class="section">
+                <h3>Current Trails</h3>
+                <div id="trailsList" class="trails-list">
+                    <p class="info">No trails loaded</p>
+                </div>
+            </div>
+
+            <div class="section info-section">
+                <h4>Instructions:</h4>
+                <ul>
+                    <li><strong>Load:</strong> Upload a .gpx file to view it</li>
+                    <li><strong>Draw:</strong> Use the polyline tool (left toolbar) to draw</li>
+                    <li><strong>Edit:</strong> Use the edit tool to modify trails</li>
+                    <li><strong>Delete:</strong> Use the delete tool to remove trails</li>
+                    <li><strong>Export:</strong> Save your work as a .gpx file</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Map Container -->
+        <div id="map"></div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Leaflet Draw JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
