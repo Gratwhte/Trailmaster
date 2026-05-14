@@ -234,3 +234,261 @@ input[type="text"]:focus {
         height: 60vh;
     }
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 320px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+.section {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #34495e;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #3498db;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.section h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #3498db;
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background: #34495e;
+    border: 1px solid #4a5f7f;
+    color: #ecf0f1;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+input[type="file"]::file-selector-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: #2980b9;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #34495e;
+    border: 1px solid #4a5f7f;
+    color: #ecf0f1;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+}
+
+.btn-success {
+    background: #27ae60;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #229954;
+}
+
+.btn-warning {
+    background: #e74c3c;
+    color: white;
+}
+
+.btn-warning:hover {
+    background: #c0392b;
+}
+
+.btn:disabled {
+    background: #7f8c8d;
+    cursor: not-allowed;
+}
+
+.info {
+    font-size: 13px;
+    color: #95a5a6;
+    line-height: 1.5;
+}
+
+.info-section ul {
+    list-style: none;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.info-section li {
+    margin-bottom: 6px;
+    color: #bdc3c7;
+}
+
+.info-section strong {
+    color: #3498db;
+}
+
+.trails-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.trail-item {
+    background: #34495e;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trail-item span {
+    font-size: 14px;
+}
+
+.trail-item button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.trail-item button:hover {
+    background: #c0392b;
+}
+
+#map {
+    flex: 1;
+    height: 100vh;
+    position: relative;
+}
+
+.status-message {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    display: none;
+}
+
+.status-message.success {
+    display: block;
+    background: #27ae60;
+    color: white;
+}
+
+.status-message.error {
+    display: block;
+    background: #e74c3c;
+    color: white;
+}
+
+/* Scrollbar styling for sidebar */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #34495e;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #4a5f7f;
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #5a6f8f;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        max-height: 40vh;
+    }
+    
+    #map {
+        height: 60vh;
+    }
+}
